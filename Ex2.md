@@ -1,5 +1,4 @@
 # EX 2 Data Manipulation Language (DML) Commands and built in functions in SQL
-## DATE:11/8/23
 ## AIM:
 To create a manager database and execute DML queries using SQL.
 
@@ -18,172 +17,198 @@ DELETE: It is used to delete records from a database table.<br>
 
 ## Create the table as given below:
 ```sql
-create table managers(enumber number(6),ename char(15),salary number(5),commission number(4),annualsalary number(7),Hiredate date,designation char(10),deptno number(2),reporting char(10));
+create table manager(enumber number(6),ename char(15),salary number(5),commission number(4),annualsalary number(7),Hiredate date,designation char(10),deptno number(2),reporting char(10));
 ```
+
 ## insert the following values into the table
 ```sql
-insert into managers values(7369,'Dharsan',2500,500,30000,'30-June-81','clerk',10,'John');
-insert into managers values(7839,'Subu',3000,400,36000,'1-Jul-82','manager',null,'James');
-insert into managers values(7934,'Aadhi',3500,300,42000,'1-May-82','manager',30,NULL);
-insert into managers values(7788,'Vikash',4000,0,48000,'12-Aug-82','clerk',50,'Bond');
+insert into manager values(7369,'Dharsan',2500,500,30000,'30-June-81','clerk',10,'John');
+insert into manager values(7839,'Subu',3000,400,36000,'1-Jul-82','manager',null,'James');
+insert into manager values(7934,'Aadhi',3500,300,42000,'1-May-82','manager',30,NULL);
+insert into manager values(7788,'Vikash',4000,0,48000,'12-Aug-82','clerk',50,'Bond');
 ```
-### Output:
-![Creating and inserting values into table](https://github.com/Jeevapriya14/EX-2-Data-Manipulation-Language-DML-and-Data-Control-Language-DCL-Commands/assets/121003043/d22ba1c6-fb6e-4716-8688-205c41f63df4)
-
-
 
 ### Q1) Update all the records of manager table by increasing 10% of their salary as bonus.
 
-### QUERY:
-```
-update managers set salary=salary+(salary*10/100);
-```
+### QUERY
+![image](https://github.com/ganeshshanmugavel27/EX-2-Data-Manipulation-Language-DML-and-Data-Control-Language-DCL-Commands/assets/122046208/42e0d337-1e61-4e21-a22e-c527c03f8e8e)
+
+
+
 
 ### OUTPUT:
-![Updation](https://github.com/Jeevapriya14/EX-2-Data-Manipulation-Language-DML-and-Data-Control-Language-DCL-Commands/assets/121003043/16012ed2-b415-4c2d-8429-c5e962ee126b)
+![image](https://github.com/ganeshshanmugavel27/EX-2-Data-Manipulation-Language-DML-and-Data-Control-Language-DCL-Commands/assets/122046208/871d54d8-75c6-4011-ae68-0791d786ca35)
+
 
 
 ### Q2) Delete the records from manager table where the salary less than 2750.
 
 
 ### QUERY:
-```
-delete managers where salary<2750;
-```
+![image](https://github.com/ganeshshanmugavel27/EX-2-Data-Manipulation-Language-DML-and-Data-Control-Language-DCL-Commands/assets/122046208/e979b5fb-7f5a-4289-8f80-7d0a30cb32b4)
+
+
 
 ### OUTPUT:
-![Deletion](https://github.com/Jeevapriya14/EX-2-Data-Manipulation-Language-DML-and-Data-Control-Language-DCL-Commands/assets/121003043/994dab65-e8d7-412d-9187-206821347524)
+![image](https://github.com/ganeshshanmugavel27/EX-2-Data-Manipulation-Language-DML-and-Data-Control-Language-DCL-Commands/assets/122046208/ce31f407-aac1-4120-9b10-7139316d8295)
+
 
 
 ### Q3) Display each name of the employee as “Name” and annual salary as “Annual Salary” (Note: Salary in emp table is the monthly salary)
 
 
 ### QUERY:
-```SELECT
-ename AS "Name",
-salary*12 AS "Annual Salary"
-FROM
-managers;
-```
-### OUTPUT:
-![Updation](https://github.com/Jeevapriya14/EX-2-Data-Manipulation-Language-DML-and-Data-Control-Language-DCL-Commands/assets/121003043/df079f1f-55a2-4455-b568-db441286b812)
+![image](https://github.com/ganeshshanmugavel27/EX-2-Data-Manipulation-Language-DML-and-Data-Control-Language-DCL-Commands/assets/122046208/451e0175-d9db-4dd6-a794-0ac89be77b8d)
 
-### Q5)	List the names of Clerks from emp table.
+
+
+### OUTPUT:
+![image](https://github.com/ganeshshanmugavel27/EX-2-Data-Manipulation-Language-DML-and-Data-Control-Language-DCL-Commands/assets/122046208/d3940f73-9e3d-43dc-990b-dbc21dd2545b)
+
+
+
+### Q4)	List the names of Clerks from emp table.
 
 
 ### QUERY:
-```select ename from managers where designation='clerk';
-```
+![image](https://github.com/ganeshshanmugavel27/EX-2-Data-Manipulation-Language-DML-and-Data-Control-Language-DCL-Commands/assets/122046208/c4b9a902-a0c9-4375-9d65-5c92124875cf)
+
+
 
 ### OUTPUT:
-![Listing](https://github.com/Jeevapriya14/EX-2-Data-Manipulation-Language-DML-and-Data-Control-Language-DCL-Commands/assets/121003043/0a740ac9-e901-4224-818c-787564c43ad9)
+
+![image](https://github.com/ganeshshanmugavel27/EX-2-Data-Manipulation-Language-DML-and-Data-Control-Language-DCL-Commands/assets/122046208/e8712716-d05a-484d-808d-9ec6e2e59377)
 
 
-### Q6)	List the names of employee who are not Managers.
+
+
+### Q5)	List the names of employee who are not Managers.
 
 
 ### QUERY:
-```
-select ename from managers where designation!='manager';
-```
+![image](https://github.com/ganeshshanmugavel27/EX-2-Data-Manipulation-Language-DML-and-Data-Control-Language-DCL-Commands/assets/122046208/50641f00-de3a-4cf3-aab7-6da5cc77542e)
+
 
 ### OUTPUT:
-![Listing](https://github.com/Jeevapriya14/EX-2-Data-Manipulation-Language-DML-and-Data-Control-Language-DCL-Commands/assets/121003043/15c5d52f-61af-43e6-94b6-907767602779)
+![image](https://github.com/ganeshshanmugavel27/EX-2-Data-Manipulation-Language-DML-and-Data-Control-Language-DCL-Commands/assets/122046208/e8071e16-c3a0-45ee-8ba6-141ab03d2d75)
 
 
-### Q7)	List the names of employees not eligible for commission.
+
+### Q6)	List the names of employees not eligible for commission.
 
 
 ### QUERY:
-```
-select ename from managers where commission=0;
-```
+![image](https://github.com/ganeshshanmugavel27/EX-2-Data-Manipulation-Language-DML-and-Data-Control-Language-DCL-Commands/assets/122046208/4c7c30b0-ad1f-4c60-ade7-62df6ccf48c5)
+
+
 
 ### OUTPUT:
+![image](https://github.com/ganeshshanmugavel27/EX-2-Data-Manipulation-Language-DML-and-Data-Control-Language-DCL-Commands/assets/122046208/1cf5bd02-fc24-494b-a1ca-01e2ad032bd0)
 
-![Listing](https://github.com/Jeevapriya14/EX-2-Data-Manipulation-Language-DML-and-Data-Control-Language-DCL-Commands/assets/121003043/2de2e750-4b77-4a53-bf5f-b55b64ab3c21)
 
 
-### Q8)	List employees whose name either start or end with ‘s’.
+### Q7)	List employees whose name either start or end with ‘s’.
 
 
 ### QUERY:
-```select ename from managers where ename LIKE 'S%' OR ename LIKE '%S';
-```
+![image](https://github.com/ganeshshanmugavel27/EX-2-Data-Manipulation-Language-DML-and-Data-Control-Language-DCL-Commands/assets/122046208/498fa7c6-a7ea-4d33-a00f-2032730b2d0c)
+
+
+
 ### OUTPUT:
-![Listing](https://github.com/Jeevapriya14/EX-2-Data-Manipulation-Language-DML-and-Data-Control-Language-DCL-Commands/assets/121003043/b3fc0396-1bf9-4763-ae8b-31ae0b8236b9)
+![image](https://github.com/ganeshshanmugavel27/EX-2-Data-Manipulation-Language-DML-and-Data-Control-Language-DCL-Commands/assets/122046208/9eefc069-ab23-4e47-8ff1-2890d96b70ae)
 
 
-### Q9) Sort emp table in ascending order by hire-date and list ename, job, deptno and hire-date.
+
+### Q8) Sort emp table in ascending order by hire-date and list ename, job, deptno and hire-date.
 
 
 ### QUERY:
-```select ename,designation,deptno,hiredate from managers order by hiredate ASC;
-```
+
+![image](https://github.com/ganeshshanmugavel27/EX-2-Data-Manipulation-Language-DML-and-Data-Control-Language-DCL-Commands/assets/122046208/cff55a03-7fdd-4df8-9d10-3c0346aac95d)
+
+
 
 ### OUTPUT:
-![Sorting](https://github.com/Jeevapriya14/EX-2-Data-Manipulation-Language-DML-and-Data-Control-Language-DCL-Commands/assets/121003043/6e037653-4091-4059-a92a-bddd805eecda)
+![image](https://github.com/ganeshshanmugavel27/EX-2-Data-Manipulation-Language-DML-and-Data-Control-Language-DCL-Commands/assets/122046208/1f2c9c02-6462-4ed9-a372-f1db7c50f137)
 
 
-### Q10) List the Details of Employees who have joined before 30 Sept 81.
+
+
+### Q9) List the Details of Employees who have joined before 30 Sept 81.
 
 
 ### QUERY:
-```select * from managers where hiredate < '30 SEP 81';
-```
+![image](https://github.com/ganeshshanmugavel27/EX-2-Data-Manipulation-Language-DML-and-Data-Control-Language-DCL-Commands/assets/122046208/c6c2e5c1-ada7-4184-ade0-d052c54f8dd6)
+
+
 
 ### OUTPUT:
+![image](https://github.com/ganeshshanmugavel27/EX-2-Data-Manipulation-Language-DML-and-Data-Control-Language-DCL-Commands/assets/122046208/342ba40e-7dc2-4720-bd92-7a0d86fbc635)
 
-![Listing](https://github.com/Jeevapriya14/EX-2-Data-Manipulation-Language-DML-and-Data-Control-Language-DCL-Commands/assets/121003043/91b5ae39-3447-49d6-8c33-24c2c1723493)
 
-### Q11)	List ename, deptno and sal after sorting emp table in ascending order by deptno and then descending order by sal.
+
+### Q10)	List ename, deptno and sal after sorting emp table in ascending order by deptno and then descending order by sal.
 
 
 ### QUERY:
-```select ename,deptno,salary from managers ORDER BY deptno ASC,salary desc;
-```
+
+![image](https://github.com/ganeshshanmugavel27/EX-2-Data-Manipulation-Language-DML-and-Data-Control-Language-DCL-Commands/assets/122046208/278b0bf4-8096-4c8a-9d43-1c492a364522)
+
+
 
 ### OUTPUT:
+![image](https://github.com/ganeshshanmugavel27/EX-2-Data-Manipulation-Language-DML-and-Data-Control-Language-DCL-Commands/assets/122046208/8e728af3-f3d9-4551-9dff-3c563accacc5)
 
-![Listing](https://github.com/Jeevapriya14/EX-2-Data-Manipulation-Language-DML-and-Data-Control-Language-DCL-Commands/assets/121003043/507318c9-f9ea-44ec-bcae-57a47c7bce5b)
 
-### Q12) List the names of employees not belonging to dept no 30,40 & 10
+
+### Q11) List the names of employees not belonging to dept no 30,40 & 10
 
 
 ### QUERY:
-```select ename from managers where deptno NOT IN (30,40,10);
-```
+![image](https://github.com/ganeshshanmugavel27/EX-2-Data-Manipulation-Language-DML-and-Data-Control-Language-DCL-Commands/assets/122046208/ee151af7-f458-401c-aa88-1f44a6370e07)
+
+
 
 ### OUTPUT:
-![Listing](https://github.com/Jeevapriya14/EX-2-Data-Manipulation-Language-DML-and-Data-Control-Language-DCL-Commands/assets/121003043/df10ee58-33c1-4859-957c-cbc5c676d9bf)
+![image](https://github.com/ganeshshanmugavel27/EX-2-Data-Manipulation-Language-DML-and-Data-Control-Language-DCL-Commands/assets/122046208/05d139fc-9bc6-4090-a982-7723ec96e3c3)
 
 
-### Q13) Find number of rows in the table EMP
+
+### Q12) Find number of rows in the table EMP
 
 ### QUERY:
-```
-select count(*) as rownumber from managers;
-```
+![image](https://github.com/ganeshshanmugavel27/EX-2-Data-Manipulation-Language-DML-and-Data-Control-Language-DCL-Commands/assets/122046208/92f21fab-436b-4b8f-a033-f1569a5eaa98)
+
+
+
 ### OUTPUT:
-![Count of rows](https://github.com/Jeevapriya14/EX-2-Data-Manipulation-Language-DML-and-Data-Control-Language-DCL-Commands/assets/121003043/25ab3941-ae65-4e15-9498-2a05af5e73e9)
+
+![image](https://github.com/ganeshshanmugavel27/EX-2-Data-Manipulation-Language-DML-and-Data-Control-Language-DCL-Commands/assets/122046208/7e86e3d1-69a8-4346-be8c-ac7fa8f85966)
 
 
-### Q14) Find maximum, minimum and average salary in EMP table.
+### Q13) Find maximum, minimum and average salary in EMP table.
 
 ### QUERY:
-```select MAX(salary) as maximumsal,MIN(salary) as minimumsal,AVG(salary)
-as averagesal from managers;
-```
+![image](https://github.com/ganeshshanmugavel27/EX-2-Data-Manipulation-Language-DML-and-Data-Control-Language-DCL-Commands/assets/122046208/e479ae08-1a71-41b3-8bf1-bc9e3cea16c3)
+
+
 
 ### OUTPUT:
-![Finding](https://github.com/Jeevapriya14/EX-2-Data-Manipulation-Language-DML-and-Data-Control-Language-DCL-Commands/assets/121003043/8134d873-db9f-4a41-acfb-9e7b1cabaf5b)
+![image](https://github.com/ganeshshanmugavel27/EX-2-Data-Manipulation-Language-DML-and-Data-Control-Language-DCL-Commands/assets/122046208/569faa4a-bf93-454b-b7ae-7f35e45bd538)
 
 
-### Q15) List the jobs and number of employees in each job. The result should be in the descending order of the number of employees.
+
+### Q14) List the jobs and number of employees in each job. The result should be in the descending order of the number of employees.
 
 ### QUERY:
-```select designation,count(*) as number_employee from managers GROUP BY designation ORDER BY number_employee DESC;
-```
+![image](https://github.com/ganeshshanmugavel27/EX-2-Data-Manipulation-Language-DML-and-Data-Control-Language-DCL-Commands/assets/122046208/7d7ef160-e631-424a-a5a2-a22c09c36bdc)
+
+
 
 ### OUTPUT:
-![Listing](https://github.com/Jeevapriya14/EX-2-Data-Manipulation-Language-DML-and-Data-Control-Language-DCL-Commands/assets/121003043/0464ee4d-ed65-4c63-9f6d-c1a5cf668315)
+![image](https://github.com/ganeshshanmugavel27/EX-2-Data-Manipulation-Language-DML-and-Data-Control-Language-DCL-Commands/assets/122046208/b0f20b88-7d95-4115-b376-a543fa74c3d1)
+
+
+### RESULT:
+QUERIES EXECUTED SUCCESSFULLY.
